@@ -1,0 +1,9 @@
+Steps to using Regular Expression Matching in Python
+
+1. Import the regex module using 'import re'
+2. Create a Regex object using re.compile() function (use a raw string)
+3. Pass the string to be searched into the Regex object's search() method.
+   This returns a Match object.
+4. Call the Match object's group() method to return a string of the matched text.
+
+Test regex at https://pythex.org/
