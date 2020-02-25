@@ -9,12 +9,15 @@ fileText = inputFile.read()
 # Find and replace words 'ADJECTIVE', 'NOUN', 'ADVERB', and 'VERB'
 
 # TODO: Refine code to compile a regex object first
-textRegex = re.compile(r'ADJECTIVE|NOUN|ADVERB|VERB')
+textRegexAdj = re.compile(r'ADJECTIVE')
+textRegexNoun = re.compile(r'NOUN')
+textRegexAdv = re.compile(r'ADVERB')
+textRegexVerb = re.compile(r'VERB')
 
-fileText = re.sub(r'ADJECTIVE', input('Enter an adjective:\n'), fileText)
-fileText = re.sub(r'NOUN', input('Enter an noun:\n'), fileText)
-fileText = re.sub(r'ADVERB', input('Enter an adverb:\n'), fileText)
-fileText = re.sub(r'VERB', input('Enter an verb:\n'), fileText)
+fileText = textRegexAdj.sub(input('Please enter an adjective:\n'), fileText)
+fileText = textRegexNoun.sub(input('Please enter an noun:\n'), fileText)
+fileText = textRegexAdv.sub(input('Please enter an adverb:\n'), fileText)
+fileText = textRegexVerb.sub(input('Please enter an verb:\n'), fileText)
 
 # Print new text to the screen.
 print(fileText)
