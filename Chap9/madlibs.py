@@ -9,6 +9,7 @@ fileText = inputFile.read()
 # Find and replace words 'ADJECTIVE', 'NOUN', 'ADVERB', and 'VERB'
 
 # TODO: Refine code to compile a regex object first
+textRegex = re.compile(r'ADJECTIVE|NOUN|ADVERB|VERB')
 
 fileText = re.sub(r'ADJECTIVE', input('Enter an adjective:\n'), fileText)
 fileText = re.sub(r'NOUN', input('Enter an noun:\n'), fileText)
