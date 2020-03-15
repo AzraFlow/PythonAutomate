@@ -21,18 +21,20 @@ logging.debug('sourceFile (%s)' %(sourceFile))
 wb = openpyxl.load_workbook(sourceFile)
 ws = wb.active
 
-rowData = ws.rows
-logging.debug('rowData (%s)' %(rowData))
-# Write the rows up to the startRow for inserted rows
-for rowNum in range(1, startRow + 1):
-    print(rowData(rowNum))
+# Move cells beyond blank row to their new location.
+for row in range(ws.max_row, startRow - 1, -1):  # loop trough the rows backwards to avoid cell overlap
+    for column in range(1, ws.max_column + 1):
+        logging.debug('row (%s)' %(row))
+        oldCell = ws.cell(row=row, column=column)
+        newCell = ws.cell(row=row + insertRows, column=column)
+        newCell.value = oldCell.value
 
-# Write the rows after the inserted rows
-# for rowNum in range(startRow, sheet.max_row + 1):
+# Clear old values from blank rows.
+for row in range(startRow, startRow + insertRows):
+    for column in range(1, ws.max_column + 1):
+        ws.cell(row=row, column=column).value = ''
 
-
-
-
+# Define new filename and save the new file.
 saveFile = str('new') + sourceFile
 logging.debug('saveFile (%s)' %(saveFile))
 wb.save(saveFile)
