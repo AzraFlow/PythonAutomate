@@ -8,7 +8,7 @@ import sys, openpyxl
 
 # Get the starting row integer, number of lines to insert integer, and the file to manipulate from the command line.
 if len(sys.argv) != 4:
-    print('Usage: python blankRowInserter.py [starting row] [number or rows to insert] [Excel file name to manipulate]')
+    print('Usage: python blankRowInserter.py [starting row] [number of rows to insert] [Excel file name to manipulate]')
     sys.exit()
 startRow = int(sys.argv[1])
 insertRows = int(sys.argv[2])
