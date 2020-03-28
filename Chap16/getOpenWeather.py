@@ -32,7 +32,9 @@ w = weatherData['list']
 
 print('\nCurrent weather in %s:' %(location))
 print(w[0]['weather'][0]['main'], '-', w[0]['weather'][0]['description'])
+print('Wind Speed: ', w[0]['wind']['speed'])
 for thirdHour in range(1, 37):
     print('\nIn %d hours:' %(thirdHour * 3))
     print(w[thirdHour]['weather'][0]['main'], '-', w[thirdHour]['weather'][0]['description'])
+    print('Wind Speed: ', w[thirdHour]['wind']['speed'])
 print()
