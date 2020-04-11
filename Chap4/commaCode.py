@@ -1,3 +1,5 @@
+#! python3
+
 
 def commaCode(commaList):
     commaReturn = ''
@@ -14,9 +16,8 @@ def commaCode(commaList):
         else:
             sep = ', '
         commaReturn = commaReturn + commaList[item] + sep
-
-
     return commaReturn
+
 
 # spam = []
 # spam = ['test']
