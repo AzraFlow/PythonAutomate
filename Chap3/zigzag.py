@@ -1,3 +1,5 @@
+#! python3
+
 """
 Zigzag game
 Shows a simple zigzag animation
@@ -17,7 +19,6 @@ for i in range(2):  # The main program loop
     for indentSize in range(fullIndent):
         time.sleep(delay)
         print(indentChar * indentSize + '*' * starLength)
-
 
     # Zag to the left 20 times.
     for indentSize in range(fullIndent, 0, -1):
