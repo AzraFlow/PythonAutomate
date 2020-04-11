@@ -1,9 +1,11 @@
+#! python3
+
 # Coin Flip Streaks Exercise
 import random
 numberOfStreaks = 0
 for experimentNumber in range(10000):
 
-    # Create lis of 100 heads or tails
+    # Create list of 100 heads or tails
 
     coinFlips = []
     for flips in range(100):
