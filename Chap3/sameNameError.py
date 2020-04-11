@@ -1,6 +1,10 @@
+#! python3
+
+
 def spam():
-  print(eggs) #ERROR!
-  eggs = 'spam local'
+    print(eggs)  # ERROR!
+    eggs = 'spam local'
+
 
 eggs = 'global'
 spam()
