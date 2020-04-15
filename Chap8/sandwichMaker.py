@@ -1,5 +1,4 @@
-
-#! Python3
+#! python3
 # Import modules
 import pyinputplus as pyip
 
@@ -15,7 +14,8 @@ toppingType = ['mayo', 'mustard', 'lettuce', 'tomato']
 ingredientPrices = {'wheat': 1.00, 'white': 0.85, 'sourdough': 1.25,
                     'chicken': 1.00, 'turkey': 0.97, 'ham': 0.91, 'tofu': 3.50,
                     'cheddar': 0.75, 'Swiss': 0.65, 'mozzarella': 0.97,
-                    'mayo': 0.25, 'mustard': 0.20, 'lettuce': 0.68, 'tomato': 0.57}
+                    'mayo': 0.25, 'mustard': 0.20, 'lettuce': 0.68,
+                    'tomato': 0.57}
 
 # Get sandwich order from customer
 bread = pyip.inputMenu(breadType)

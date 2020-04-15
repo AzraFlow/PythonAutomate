@@ -1,5 +1,8 @@
+#! python3
+
 import pyinputplus as pyip
-import random, time
+import random
+import time
 
 numberOfQuestions = 10
 correctAnswers = 0
@@ -8,14 +11,14 @@ for questionNumber in range(numberOfQuestions):
     num1 = random.randint(0, 9)
     num2 = random.randint(0, 9)
 
-    prompt = '#%s: %s X %s = ' %(questionNumber+1, num1, num2)
+    prompt = '#%s: %s X %s = ' % (questionNumber + 1, num1, num2)
 
     try:
         # Right answers are handled by allowRegexes.
         # Wrong answers are handled by blockRegexes, with a custom message.
         pyip.inputStr(prompt, allowRegexes=['^%s$' % (num1 * num2)],
-                    blockRegexes=[('.*', 'Incorrect!')],
-                    timeout=8, limit=3)
+                      blockRegexes=[('.*', 'Incorrect!')],
+                      timeout=8, limit=3)
 
     except pyip.TimeoutException:
         print('Out of time!')
@@ -27,4 +30,4 @@ for questionNumber in range(numberOfQuestions):
         correctAnswers += 1
     time.sleep(1)  # Brief pause to let user see the result.
 
-print('\nScore: %s out of %s' %(correctAnswers, numberOfQuestions))
+print('\nScore: %s out of %s' % (correctAnswers, numberOfQuestions))

@@ -1,3 +1,5 @@
+#! python3
+
 import pyinputplus as pyip
 
 while True:
@@ -5,8 +7,5 @@ while True:
     response = pyip.inputYesNo(prompt)
     if response == 'no':
         break
-
-
-
 
 print('Thank You.  Have a nice day.')
