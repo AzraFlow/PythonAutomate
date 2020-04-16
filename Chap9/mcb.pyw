@@ -4,7 +4,9 @@
 #   py.exe mcb.pyw <keyword> - Loads keyword to clipboard.
 #   py.exe mcb.pyw list - Loads all keywords to clipboard.
 
-import shelve, pyperclip, sys
+import shelve
+import pyperclip
+import sys
 
 mcbShelf = shelve.open('mcb')
 

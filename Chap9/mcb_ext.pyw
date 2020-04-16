@@ -6,7 +6,9 @@
 #   py.exe mcb_ext.pyw delete <keyword> - Delete keyword from clipboard.
 #   py.exe mcb_ext.pyw clear - Delete all keywords from clipboard.
 
-import shelve, pyperclip, sys
+import shelve
+import pyperclip
+import sys
 
 mcbShelfExt = shelve.open('mcb_ext')
 
