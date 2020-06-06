@@ -10,5 +10,5 @@ while timeLeft > 0:
     time.sleep(1)
     timeLeft = timeLeft - 1
 
-# At the end of the countdown, play a sound file.
+# At the end of the countdown, play a sound file as alarm.
 subprocess.Popen(['start', 'alarm.wav'], shell=True)
