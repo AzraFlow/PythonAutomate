@@ -1,3 +1,5 @@
+#! python3
+
 print('What is your name?')
 name = input()
 print('What is your age?')
@@ -12,3 +14,4 @@ elif age > 100:
     print('You are not Alice, grannie.')
 else:
     print('Who are you?')
+    
