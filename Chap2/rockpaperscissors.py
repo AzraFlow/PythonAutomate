@@ -1,3 +1,5 @@
+#! python3
+
 import random
 import sys
 import time
@@ -16,7 +18,7 @@ while True:  # The main game loop.
         playerMove = input()
         if playerMove == 'q':
             sys.exit()  # Quit the program.
-        if playerMove == 'r' or playerMove == 'p' or playerMove == 's':
+        if playerMove in ['r', 'p', 's']:
             break  # Break out of the player input loop.
         print('Type your move:  r, p, s, or q.')
 
@@ -44,22 +46,22 @@ while True:  # The main game loop.
     time.sleep(1)
     if playerMove == computerMove:
         print('It is a tie!')
-        ties = ties + 1
+        ties += 1
     elif playerMove == 'r' and computerMove == 's':
         print('You win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 'p' and computerMove == 'r':
         print('You win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 's' and computerMove == 'p':
         print('Wou win!')
-        wins = wins + 1
+        wins += 1
     elif playerMove == 'r' and computerMove == 'p':
         print('You Lose!')
-        losses = losses + 1
+        losses += 1
     elif playerMove == 'p' and computerMove == 's':
         print('You Lose!')
-        losses = losses + 1
+        losses += 1
     elif playerMove == 's' and computerMove == 'r':
         print('You Lose!')
-        losses = losses + 1
+        losses += 1
