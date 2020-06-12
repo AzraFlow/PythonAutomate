@@ -31,15 +31,18 @@ for word in message.split():
 
     # Separate the consonants at the start of this word.
     prefixConsonants = ''
-    while len(word) > 0 and not word[0] in VOWELS:
+    while len(word) > 0 and word[0] not in VOWELS:
         prefixConsonants += word[0]
         word = word[1:]
 
-    # Add the Pig Latin ending to the word:
-    if prefixConsonants != '':
-        word += prefixConsonants + 'ay'
-    else:
-        word += 'yay'
+    # # Add the Pig Latin ending to the word:
+    # if prefixConsonants != '':
+    #     word += prefixConsonants + 'ay'
+    # else:
+    #     word += 'yay'
+
+    # Alternate - Add the Pig Latin ending to the word:
+    word += prefixConsonants + 'ay' if prefixConsonants != '' else 'yay'
 
     # Set the word back to uppercase or title case:
     if wasUpper:
