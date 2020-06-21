@@ -21,15 +21,23 @@ ingredientPrices = {'wheat': 1.00, 'white': 0.85, 'sourdough': 1.25,
 bread = pyip.inputMenu(breadType)
 protein = pyip.inputMenu(proteinType)
 print('Would you like cheese on your sandwich?')
-if pyip.inputYesNo() == 'yes':
-    cheese = pyip.inputMenu(cheeseType)
-else:
-    cheese = ''
+
+# if pyip.inputYesNo() == 'yes':
+#     cheese = pyip.inputMenu(cheeseType)
+# else:
+#     cheese = ''
+
+# Refactored
+cheese = pyip.inputMenu(cheeseType) if pyip.inputYesNo() == 'yes' else ''
+
 print('Would you like a topping on your sandwich?')
-if pyip.inputYesNo() == 'yes':
-    topping = pyip.inputMenu(toppingType)
-else:
-    topping = ''
+# if pyip.inputYesNo() == 'yes':
+#     topping = pyip.inputMenu(toppingType)
+# else:
+#     topping = ''
+
+# Refactored
+topping = pyip.inputMenu(toppingType) if pyip.inputYesNo() == 'yes' else ''
 
 sandwich = [bread, protein, cheese, topping]
 
